@@ -1,0 +1,78 @@
+           
+#pyramid {
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    height: 500px;
+    width: 100px;
+    transform-style: preserve-3d;
+    animation: spin 10s linear infinite;
+    transform-origin: 116px 200px 116px;
+}
+#pyramid>div {
+    border-color: transparent transparent transparent rgba(50, 50, 50, .9);
+    
+    position: absolute;
+    border-style: solid;
+    border-width: 200px 0 200px 346px;
+
+    
+    transform-origin: 0 0;
+}
+
+#pyramid>div:first-child {
+    transform: rotateY(-19.5deg) rotateX(180deg) translateY(-400px);
+}
+
+#pyramid>div:nth-child(2) {
+    transform: rotateY(90deg) rotateZ(60deg) rotateX(180deg) translateY(-400px);
+}
+
+#pyramid>div:nth-child(3) {
+    transform: rotateX(60deg) rotateY(19.5deg);
+}
+
+#pyramid>div:nth-child(4) {
+    transform: rotateX(-60deg) rotateY(19.5deg) translateX(-116px) translateY(-200px) translateZ(326px);
+}
+
+#pyramid>div:after {
+    position: absolute;
+    color: #fff;
+    left: -311px;
+    top: -69px;
+    text-align: center;
+    opacity: .6;
+    position: absolute
+}
+
+#pyramid>div:first-child:after {content: url(../img/logo1.png);}
+#pyramid>div:nth-child(2):after {content: url(../img/logo2.png);}
+#pyramid>div:nth-child(3):after {content: url(../img/logo3.png);}
+#pyramid>div:nth-child(4):after {
+    width: 150px;left: -315px;top: -91px;
+    content: url(../img/logo4.png);
+}
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+
+    100% {
+         transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+
+#pyramid:hover{
+    -webkit-animation-play-state:paused;
+}
+
+
+
+
+
+
